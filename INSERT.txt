@@ -1,0 +1,363 @@
+INSERT INTO Genre (name)
+VALUES ('Rock');
+
+INSERT INTO Genre (name)
+VALUES ('Pop');
+
+INSERT INTO Genre (name)
+VALUES ('Jazz');
+
+INSERT INTO Genre (name)
+VALUES ('Trans');
+
+INSERT INTO Genre (name)
+VALUES ('Dram');
+
+INSERT INTO Genre (name)
+VALUES ('Инструментальна музыка');
+
+INSERT INTO Genre (name)
+VALUES ('Эмбиент');
+
+INSERT INTO Genre (name)
+VALUES ('Rap');
+
+INSERT INTO Genre (name)
+VALUES ('Hip-hous');
+
+
+
+INSERT INTO Collection (name, release_date)
+VALUES('Лучшие песни русского рока', '2005-03-16');
+
+INSERT INTO Collection (name, release_date)
+VALUES('Линки', '2019-06-20');
+
+INSERT INTO Collection (name, release_date)
+VALUES('Джаз', '2008-01-01');
+
+INSERT INTO Collection (name, release_date)
+VALUES('Музыка90-х', '2016-12-07');
+
+INSERT INTO Collection (name, release_date)
+VALUES('За кадром', '2015-05-12');
+
+INSERT INTO Collection (name, release_date)
+VALUES('Вечные хиты', '2004-08-30');
+
+INSERT INTO Collection (name, release_date)
+VALUES('В машину', '2023-02-20');
+
+INSERT INTO Collection (name, release_date)
+VALUES('Поп-классика', '2010-11-19');
+
+
+
+
+
+INSERT INTO Singer (name)
+VALUES('Кино');
+
+INSERT INTO Singer (name)
+VALUES('Чиж');
+
+INSERT INTO Singer (name)
+VALUES('Linkin Park');
+
+INSERT INTO Singer (name)
+VALUES('Mike Shinoda');
+
+INSERT INTO Singer (name)
+VALUES('Louis Armstrong');
+
+INSERT INTO Singer (name)
+VALUES('Ella Fitzgerald');
+
+INSERT INTO Singer (name)
+VALUES('Dr. Alban');
+
+INSERT INTO Singer (name)
+VALUES('E-Type');
+
+INSERT INTO Singer (name)
+VALUES('Enio Morricone');
+
+INSERT INTO Singer (name)
+VALUES('Hans Zimmer');
+
+INSERT INTO Singer (name)
+VALUES('Status Quo');
+
+INSERT INTO Singer (name)
+VALUES('Cloud Visuals');
+
+INSERT INTO Singer (name)
+VALUES('Bassboosted');
+
+INSERT INTO Singer (name)
+VALUES('Michael Jackson');
+
+INSERT INTO Singer (name)
+VALUES('Sandra');
+
+
+
+
+
+INSERT INTO Album (name, release_date)
+VALUES('Группа крови', '1988-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Чиж', '1993-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Hibrid Theory', '2000-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Post Traumatic', '2018-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Ella and Louis Again ', '1957-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Ella in Hollywood', '1961-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('One Love', '1992-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Made in Sweden', '1994-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Профессионал', '1981-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Интерстеллар', '2014-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('In the army now', '1986-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Cloud Visuals', '2022-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Bassboosted', '2022-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('Thriller', '1982-01-01');
+
+INSERT INTO Album (name, release_date)
+VALUES('The long play', '1985-01-01');
+
+
+
+
+
+INSERT INTO Track (album_id, name, duration)
+VALUES(1, 'Бошетунмай', 249);
+
+INSERT INTO Track (name, duration)
+VALUES(2, 'Вечная молодость', 190);
+
+INSERT INTO Track (name, duration)
+VALUES(3, 'My december', 258);
+
+INSERT INTO Track (name, duration)
+VALUES(4, 'Over again', 209);
+
+INSERT INTO Track (name, duration)
+VALUES(5, 'Ive got my love to keep me', 192);
+
+INSERT INTO Track (name, duration)
+VALUES(6, 'Satin Poll', 174);
+
+INSERT INTO Track (name, duration)
+VALUES(7, 'Its my life', 243);
+
+INSERT INTO Track (name, duration)
+VALUES(8, 'Set the world on Eire', 224);
+
+INSERT INTO Track (name, duration)
+VALUES(9, 'Chi Mai', 223);
+
+INSERT INTO Track (name, duration)
+VALUES(10, 'Cornfield Chase', 127);
+
+INSERT INTO Track (name, duration)
+VALUES(1, 'Легенда', 250);
+
+INSERT INTO Track (name, duration)
+VALUES(11, 'In the army now', 281);
+
+INSERT INTO Track (name, duration)
+VALUES(12, 'Best Miracles', 202);
+
+INSERT INTO Track (name, duration)
+VALUES(13, 'Money', 115);
+
+INSERT INTO Track (name, duration)
+VALUES(14, 'Beat it', 299);
+
+INSERT INTO Track (name, duration )
+VALUES(15, 'Maria Magdalena', 238);
+
+
+
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(1, 1);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(2, 2);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(3, 3);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(4, 4);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(5, 5);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(6, 6);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(7, 7);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(8, 8);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(9, 9);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(10, 10);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(11, 11);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(12, 12);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(13, 13);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(14, 14);
+
+INSERT INTO SingerAlbum (singer_id, album_id)
+VALUES(15, 15);
+
+
+
+
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(1, 1);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(1, 2);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(1, 3);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(8, 4);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(3, 5);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(3, 6);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(9, 7);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(2, 8);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(6, 9);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(7, 10);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(1, 11);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(4, 12);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(5, 13);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(2, 14);
+
+INSERT INTO GenreSinger (category_id, singer_id)
+VALUES(2, 15);
+
+
+
+
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(1, 1);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(1, 2);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(2, 3);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(2, 4);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(3, 5);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(3, 6);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(4, 7);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(4, 8);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(5, 9);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(5, 10);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(6, 11);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(6, 12);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(7, 13);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(7, 14);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(8, 15);
+
+INSERT INTO TrackCollection (collection_id, track_id)
+VALUES(8, 16);
+
+
+
+
+
+
+
+
+
+
+
+
