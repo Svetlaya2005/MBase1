@@ -1,0 +1,24 @@
+SELECT name, release_date FROM Album
+WHERE release_date = '2018-01-01';
+
+
+SELECT name, duration FROM Track
+ORDER BY duratoin DESC 
+LIMIT 1;
+
+
+SELECT name FROM Track
+WHERE duration > 210;
+
+
+SELECT name FROM Collection
+WHERE release_date >= '2018-01-01' AND release_date <= '2020-01-01';
+
+
+SELECT name FROM Track
+WHERE name NOT LIKE '% %';
+
+
+SELECT name FROM Track
+WHERE name LIKE '%мой%' OR name LIKE '%my%';
+
