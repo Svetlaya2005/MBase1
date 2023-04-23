@@ -1,0 +1,86 @@
+--1:
+
+SELECT g.name, COUNT(s.name) FROM Genre AS g
+LEFT JOIN GenreSinger AS gs ON g.id = gs.category_id
+LEFT JOIN Singer AS s on gs.Singer_id = s.id
+GROUP BY g.name
+ORDER BY COUNT(s.id) DESC
+
+--2:
+
+SELECT t.name, a.release_year FROM Album AS a
+LEFT JOIN Track AS t ON t.album_id = a.id
+WHERE (a.release_year >= 2019) AND (a.release_year <= 2020)
+
+--3:
+
+SELECT a.name, AVG(t.length) FROM Album AS a
+LEFT JOIN Track AS t ON t.album_id = a.id
+GROUP BY a.name
+ORDER BY AVG(t.length)
+
+--4: 
+
+SELECT DISTINCT s.name FROM Singer AS s
+WHERE s.name NOT IN (
+    SELECT DISTINCT s.name
+    FROM Singer AS s
+    LEFT JOIN SingerAlbum AS sa ON s.id = sa.singer_id
+    LEFT JOIN Album AS a ON a.id = sa.album_id
+    WHERE a.release_year = 2020
+)
+ORDER BY s.name
+
+--5: Sandra
+
+SELECT DISTINCT c.name FROM collection AS c
+LEFT JOIN trackcollection AS tc ON c.id = tc.collection_id
+LEFT JOIN track AS t ON t.id = tc.track_id
+LEFT JOIN album AS a ON a.id = t.album_id
+LEFT JOIN singeralbum AS sa on sa.album_id = a.id
+LEFT JOIN singer AS s ON s.id = sa.singer_id
+WHERE s.name LIKE '%%Sandra%%'
+ORDER BY c.name
+
+--6:
+
+SELECT a.name FROM Album AS a
+LEFT JOIN SingerAlbum AS sa ON a.id = sa.album_id
+LEFT JOIN Singer AS s ON s.id = sa.singer_id
+LEFT JOIN GenreSinger AS gs ON s.id = gs.singer_id
+LEFT JOIN Genre AS g ON g.id = gs.category_id
+GROUP BY a.name
+HAVING COUNT(DISTINCT g.name) > 1
+ORDER BY a.name
+
+--7:
+
+SELECT t.name FROM Track AS t
+LEFT JOIN TrackCollections AS tc on t.id = tc.track_id
+WHERE tc.track_id IS NULL
+
+--8:
+
+SELECT s.name, t.length FROM Track AS t
+LEFT JOIN Album AS a ON a.id = t.album_id
+LEFT JOIN SingerAlbum AS sa ON sa.album_id = a.id
+LEFT JOIN Singer AS s ON s.id = sa.singer_id
+GROUP BY s.name, t.length
+HAVING t.length = (SELECT MIN(length) FROM Track)
+ORDER BY s.name
+
+--9:
+
+SELECT DISTINCT a.name FROM Album AS a
+LEFT JOIN Track AS t ON t.album_id = a.id
+WHERE t.album_id IN (
+    SELECT album_id FROM Track
+    GROUP BY album_id
+    HAVING COUNT(id) = (
+        SELECT COUNT(id) FROM Track
+        GROUP BY album_id
+        ORDER BY COUNT
+        LIMIT 1
+    )
+)
+ORDER BY a.name
